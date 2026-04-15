@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Portfolio Manager",
+    "role": "Chief Investment Officer",
+    "specialty": "Systematic Trading",
+    "bio": "Institutional experience in quantitative strategies and options market making. Former senior roles at tier-one investment banks with focus on systematic alpha generation."
+  },
+  {
+    "name": "Risk Manager", 
+    "role": "Head of Risk",
+    "specialty": "Risk Management",
+    "bio": "Expertise in derivatives risk management and regulatory compliance. Background in institutional risk control and portfolio construction with emphasis on drawdown management.",
+    "image": "/images/pepe.png"
+  },
+  {
+    "name": "Operations Lead",
+    "role": "Chief Operating Officer", 
+    "specialty": "Operations & Compliance",
+    "bio": "Operational expertise in fund management and FCA regulatory framework. Experience in institutional operations, compliance, and investor relations."
+  }
+]

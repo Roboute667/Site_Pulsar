@@ -1,0 +1,37 @@
+[
+  {
+    "question": "What is Pulsar Fund Management?",
+    "answer": "Pulsar is an FCA-regulated fund management company based in London. We operate systematic options strategies enhanced with Bitcoin allocation overlay, focusing on disciplined risk management and institutional-grade execution.",
+    "category": "fundamentals"
+  },
+  {
+    "question": "Who can invest with Pulsar?",
+    "answer": "We work with professional investors, institutional clients, and qualified individuals who meet FCA eligibility requirements. Specific criteria depend on jurisdiction and investment size.",
+    "category": "fundamentals"
+  },
+  {
+    "question": "How do your options strategies work?",
+    "answer": "We employ systematic, intraday options strategies designed to capture time decay and volatility inefficiencies. Our algorithms execute delta-neutral positions with active gamma management.",
+    "category": "strategy"
+  },
+  {
+    "question": "Why include Bitcoin allocation?",
+    "answer": "Bitcoin allocation serves as a portfolio enhancement tool, providing uncorrelated returns and potential diversification benefits. Our approach is systematic, not speculative.",
+    "category": "strategy"
+  },
+  {
+    "question": "How do you manage risk?",
+    "answer": "We employ multiple risk controls: defined maximum drawdown limits, real-time position monitoring, dynamic sizing based on volatility, and systematic stop-loss protocols.",
+    "category": "strategy"
+  },
+  {
+    "question": "How often do you provide performance reports?",
+    "answer": "We provide monthly performance reports with detailed attribution analysis. Additional reporting may be available based on investor requirements.",
+    "category": "operations"
+  },
+  {
+    "question": "What does FCA regulation mean for investors?",
+    "answer": "FCA regulation provides investor protection through capital requirements, conduct standards, and regulatory oversight. We operate under UK regulatory framework with institutional-grade compliance.",
+    "category": "compliance"
+  }
+]

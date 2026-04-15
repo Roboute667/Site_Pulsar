@@ -1,0 +1,28 @@
+{
+  "mission": "To deliver systematic, risk-controlled returns through disciplined options strategies enhanced with strategic Bitcoin allocation. We operate with institutional rigor, regulatory compliance, and transparent communication—no promises of outsized returns, only measured pursuit of consistent alpha generation.",
+  "approach": [
+    {
+      "title": "Systematic Options",
+      "description": "Algorithmic execution of options strategies designed to capture time decay and volatility inefficiencies. Positions are held intraday with systematic entry and exit rules based on quantitative signals."
+    },
+    {
+      "title": "Bitcoin Overlay",
+      "description": "Systematic Bitcoin allocation designed to provide uncorrelated returns and portfolio enhancement. Not speculative trading—measured exposure based on volatility-adjusted position sizing."
+    }
+  ],
+  "risk": [
+    {
+      "title": "Drawdown Limits",
+      "description": "Maximum drawdown thresholds with automatic position reduction protocols."
+    },
+    {
+      "title": "Position Sizing",
+      "description": "Dynamic allocation based on volatility, correlation, and market conditions."
+    },
+    {
+      "title": "Real-time Monitoring",
+      "description": "Continuous risk assessment with automated alerts and intervention triggers."
+    }
+  ],
+  "location": "London, UK - FCA Regulated"
+}
