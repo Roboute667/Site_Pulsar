@@ -2,6 +2,7 @@
 
 import { Suspense, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { PulsarCanvas } from './PulsarCanvas'
 import { fadeInUp } from '@/lib/motion'
 
@@ -78,17 +79,32 @@ export function Hero() {
       {/* Main Content Container */}
       <div className="relative z-20 flex-1 flex flex-col justify-between pt-16 pb-6">
         
-        {/* Title block: positioned in the upper portion */}
-        <div className="flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12">
-          <div className="max-w-3xl text-center space-y-4">
+        {/* Logo + subtitle: positioned in the upper portion */}
+        <div className="flex items-start justify-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8">
+          <div className="max-w-3xl text-center space-y-5">
             <motion.div
               variants={fadeInUp}
               initial="initial"
               animate="animate"
-              className="space-y-4"
+              className="space-y-5"
             >
+              {/* Pulsar Logo */}
+              <motion.div
+                className="flex justify-center"
+                variants={fadeInUp}
+              >
+                <Image
+                  src="/images/pulsar-logo-full.png"
+                  alt="Pulsar"
+                  width={280}
+                  height={280}
+                  className="w-48 sm:w-56 lg:w-72 h-auto drop-shadow-2xl"
+                  priority
+                />
+              </motion.div>
+
               <motion.h1 
-                className="text-2xl sm:text-3xl lg:text-4xl font-tight font-bold leading-tight"
+                className="text-xl sm:text-2xl lg:text-3xl font-tight font-bold leading-tight"
                 variants={fadeInUp}
               >
                 Alternative Multi-Strategy
