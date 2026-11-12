@@ -26,20 +26,11 @@ export const metadata: Metadata = {
     siteName: 'Pulsar Fund Management',
     title: 'Pulsar | Alternative Multi-Strategy Fund',
     description: 'FCA-regulated alternative investment fund combining five complementary strategies for all market conditions.',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Pulsar Fund Management',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pulsar | Alternative Multi-Strategy Fund',
     description: 'FCA-regulated alternative investment fund combining five complementary strategies for all market conditions.',
-    images: ['/images/og-image.jpg'],
   },
   icons: {
     icon: [

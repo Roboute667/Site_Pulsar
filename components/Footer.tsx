@@ -54,8 +54,8 @@ export function Footer() {
               FCA-regulated in London.
             </p>
             <div className="text-xs text-muted">
-              <p>© 2025 Pulsar Fund Management Ltd.</p>
-              <p>Last updated: September 2025</p>
+              <p>© {new Date().getFullYear()} Pulsar Fund Management Ltd.</p>
+              <p>Last updated: November 2026</p>
               <p>Authorised and regulated by the Financial Conduct Authority.</p>
             </div>
           </div>
