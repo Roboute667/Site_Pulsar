@@ -30,34 +30,7 @@ export default function HomePage() {
       
       <div className="relative z-10">
         <Hero />
-        
-        {/* Powered By Banner */}
-        <motion.div 
-          className="bg-card/20"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              variants={fadeInUp}
-              className="text-center py-8"
-            >
-              <p className="text-sm text-muted mb-4 font-medium">Powered by</p>
-              <div className="flex justify-center">
-                <Image
-                  src="/images/placeholderpowered.png"
-                  alt="Powered by"
-                  width={1000}
-                  height={200}
-                  className="opacity-70 hover:opacity-90 transition-opacity duration-300 max-w-full h-auto"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
-      
+
       {/* Multi-Strategy Overview */}
       <Section 
         id="strategies"
@@ -712,7 +685,7 @@ export default function HomePage() {
               Our Strategy
             </CTA>
             <CTA href="/disclosures" variant="secondary" size="lg">
-              Investment Terms
+              Risk Disclosures
             </CTA>
           </CTAGroup>
         </motion.div>
@@ -730,8 +703,8 @@ export default function HomePage() {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
               {/* Left side - Text */}
               <div className="flex-1 text-left">
-                <h3 className="text-lg font-semibold mb-1">Have questions or need assistance?</h3>
-                <p className="text-muted text-sm">Our support team is ready to help! We aim to respond within 24 hours.</p>
+                <h3 className="text-lg font-semibold mb-1">Enquiries</h3>
+                <p className="text-muted text-sm">For questions about our strategies or regulatory framework, send us a message. We aim to respond within 24 hours.</p>
               </div>
               
               {/* Right side - Contact */}

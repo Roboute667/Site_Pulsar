@@ -3,6 +3,7 @@
 import { Suspense, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { PulsarCanvas } from './PulsarCanvas'
 import { fadeInUp } from '@/lib/motion'
 
@@ -142,6 +143,12 @@ export function Hero() {
             >
               Learn More
             </button>
+            <Link
+              href="/contact"
+              className="px-6 py-3 border border-violet text-fg font-medium text-base rounded-lg hover:bg-violet hover:text-white transition-all duration-300"
+            >
+              Contact Us
+            </Link>
           </motion.div>
 
           {/* FCA Badge */}
