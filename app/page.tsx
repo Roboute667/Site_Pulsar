@@ -744,8 +744,8 @@ export default function HomePage() {
                     contact@pulsarfund.com
                   </div>
                 </div>
-                <CTA href="mailto:contact@pulsarfund.com" variant="primary" size="lg" className="px-12 py-4 min-w-[180px] w-full max-w-[220px]">
-                  Email Us
+                <CTA href="/contact" variant="primary" size="lg" className="px-12 py-4 min-w-[180px] w-full max-w-[220px]">
+                  Contact Us
                 </CTA>
               </div>
             </div>
