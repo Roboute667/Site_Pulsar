@@ -26,8 +26,8 @@ export default function ContactPage() {
         <ContactForm />
         <p className="text-center text-sm text-muted">
           Or email us directly at{' '}
-          <a href="mailto:contact@pulsarfund.com" className="text-violet hover:underline">
-            contact@pulsarfund.com
+          <a href="mailto:vfabre@pulsar-capital-management.com" className="text-violet hover:underline">
+            vfabre@pulsar-capital-management.com
           </a>
         </p>
       </div>

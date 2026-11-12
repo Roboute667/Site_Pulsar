@@ -11,6 +11,7 @@ export interface ContactState {
 }
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const DEFAULT_TO = 'vfabre@pulsar-capital-management.com'
 const DEFAULT_FROM = 'Pulsar Website <onboarding@resend.dev>'
 
 /**
@@ -19,7 +20,7 @@ const DEFAULT_FROM = 'Pulsar Website <onboarding@resend.dev>'
  *
  * Environment variables:
  * - RESEND_API_KEY: the Resend API key (required)
- * - CONTACT_TO_EMAIL: the inbox that receives the messages (required)
+ * - CONTACT_TO_EMAIL: the inbox that receives the messages (optional, defaults to DEFAULT_TO)
  * - CONTACT_FROM_EMAIL: the sender, on a domain verified in Resend (optional)
  */
 export async function sendContactMessage(
@@ -42,9 +43,9 @@ export async function sendContactMessage(
   if (message.length < 10) return { ok: false, message: 'Please enter a message of at least 10 characters.', values }
 
   const apiKey = process.env.RESEND_API_KEY
-  const to = process.env.CONTACT_TO_EMAIL
-  if (!apiKey || !to) {
-    console.error('Contact form: RESEND_API_KEY or CONTACT_TO_EMAIL is not set.')
+  const to = process.env.CONTACT_TO_EMAIL || DEFAULT_TO
+  if (!apiKey) {
+    console.error('Contact form: RESEND_API_KEY is not set.')
     return { ok: false, message: 'The contact form is temporarily unavailable. Please try again later.', values }
   }
 
