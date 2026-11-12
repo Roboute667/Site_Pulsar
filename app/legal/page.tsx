@@ -144,7 +144,7 @@ export default function LegalPage() {
                 <div className="bg-bg/50 rounded-lg p-4 mt-3">
                   <p className="font-medium text-fg">Pulsar Fund Management Ltd</p>
                   <p>London, United Kingdom</p>
-                  <p>Email: legal@pulsarfund.com</p>
+                  <p>Email: vfabre@pulsar-capital-management.com</p>
                 </div>
               </div>
             </div>
