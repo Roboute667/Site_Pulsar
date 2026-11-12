@@ -9,15 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: 'var(--bg)',
-        fg: 'var(--fg)',
-        violet: 'var(--violet)',
-        card: 'var(--card)',
-        muted: 'var(--muted)',
-        g1: 'var(--g1)',
-        g2: 'var(--g2)',
-        g3: 'var(--g3)',
-        g4: 'var(--g4)',
+        // Channel triplets, so opacity modifiers such as bg-card/30 or border-violet/30 work.
+        bg: 'rgb(var(--bg-rgb) / <alpha-value>)',
+        fg: 'rgb(var(--fg-rgb) / <alpha-value>)',
+        violet: 'rgb(var(--violet-rgb) / <alpha-value>)',
+        card: 'rgb(var(--card-rgb) / <alpha-value>)',
+        muted: 'rgb(var(--muted-rgb) / <alpha-value>)',
+        g1: 'rgb(var(--g1-rgb) / <alpha-value>)',
+        g2: 'rgb(var(--g2-rgb) / <alpha-value>)',
+        g3: 'rgb(var(--g3-rgb) / <alpha-value>)',
+        g4: 'rgb(var(--g4-rgb) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

@@ -12,20 +12,17 @@ import Image from 'next/image'
 export default function HomePage() {
   return (
     <div className="relative">
-      {/* Subtle background fades - positioned behind all content */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        {/* Top right fade - behind navbar area */}
-        <div className="absolute top-32 right-16 w-72 h-72 bg-violet/2 rounded-full blur-3xl" />
-        {/* Left side fade - mid page */}
-        <div className="absolute top-1/2 left-0 w-56 h-80 bg-purple-500/1.5 rounded-full blur-3xl transform -translate-x-16" />
-        {/* Bottom right fade - near footer */}
-        <div className="absolute bottom-1/3 right-12 w-64 h-64 bg-violet/1.5 rounded-full blur-3xl" />
-        {/* Center left subtle fade - between sections */}
-        <div className="absolute top-2/3 left-1/3 w-40 h-40 bg-indigo-400/1 rounded-full blur-2xl" />
-        {/* Top center fade - very subtle */}
-        <div className="absolute top-20 left-1/2 w-48 h-48 bg-violet/1 rounded-full blur-3xl transform -translate-x-1/2" />
-        {/* Bottom left corner fade */}
-        <div className="absolute bottom-20 left-8 w-52 h-52 bg-purple-600/1.5 rounded-full blur-3xl" />
+      {/* Ambient glows behind all content, so the page is not flat below the hero */}
+      <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(60% 45% at 85% 15%, rgb(var(--violet-rgb) / 0.22), transparent 70%), ' +
+              'radial-gradient(55% 50% at 5% 55%, rgb(var(--g2-rgb) / 0.16), transparent 70%), ' +
+              'radial-gradient(60% 45% at 75% 95%, rgb(var(--g3-rgb) / 0.45), transparent 70%)',
+          }}
+        />
       </div>
       
       <div className="relative z-10">
@@ -343,7 +340,7 @@ export default function HomePage() {
       <Section id="credibility">
         <motion.div 
           variants={fadeInUp}
-          className="relative bg-gradient-to-br from-gray-900/50 via-black/30 to-gray-800/50 rounded-2xl overflow-hidden backdrop-blur-sm"
+          className="relative bg-gradient-to-br from-card via-card/80 to-g3/40 rounded-2xl overflow-hidden border border-white/10"
         >
           {/* London Background Image */}
           <div className="absolute inset-0">
@@ -356,17 +353,17 @@ export default function HomePage() {
                  style={{
                    objectPosition: '50% calc(50% - 45px)', // Raised by 45px
                    objectFit: 'cover',
-                   filter: 'grayscale(60%) brightness(0.6) contrast(1.1) saturate(0.7)',
+                   filter: 'grayscale(35%) brightness(0.9) contrast(1.05) saturate(0.85)',
                  }}
               />
               {/* Overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
+              <div className="absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/45 to-bg/75" />
             </div>
           </div>
           
           {/* Subtle violet halo effect */}
-          <div className="absolute top-0 left-0 w-32 h-32 bg-violet/8 rounded-full blur-2xl transform -translate-x-8 -translate-y-8" />
-          <div className="absolute bottom-0 right-0 w-24 h-24 bg-violet/6 rounded-full blur-xl transform translate-x-6 translate-y-6" />
+          <div className="absolute top-0 left-0 w-32 h-32 bg-violet/10 rounded-full blur-2xl transform -translate-x-8 -translate-y-8" />
+          <div className="absolute bottom-0 right-0 w-24 h-24 bg-violet/10 rounded-full blur-xl transform translate-x-6 translate-y-6" />
           
           <div className="relative z-10 py-16 px-8 text-center">
             <div className="space-y-6">
@@ -391,6 +388,7 @@ export default function HomePage() {
       {/* Bitcoin Allocation Framework */}
       <Section 
         id="bitcoin"
+        className="bg-card/30"
         title="Bitcoin Allocation Framework"
         subtitle="Disciplined exposure with automatic rebalancing and strict risk controls"
         centered
@@ -403,7 +401,7 @@ export default function HomePage() {
               className="relative group h-full"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="relative bg-gradient-to-br from-gray-900/60 via-black/40 to-gray-800/60 rounded-2xl p-8 backdrop-blur-sm border border-gray-800/50 hover:border-purple-500/30 transition-all duration-300 h-full">
+              <div className="relative bg-gradient-to-br from-card via-card/90 to-g3/50 rounded-2xl p-8 backdrop-blur-sm border border-white/10 hover:border-purple-500/30 transition-all duration-300 h-full">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gradient-to-br from-violet to-violet/80 rounded-xl flex items-center justify-center shadow-lg shadow-violet/25">
@@ -431,7 +429,7 @@ export default function HomePage() {
               className="relative group h-full"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="relative bg-gradient-to-br from-gray-900/60 via-black/40 to-gray-800/60 rounded-2xl p-8 backdrop-blur-sm border border-gray-800/50 hover:border-blue-500/30 transition-all duration-300 h-full">
+              <div className="relative bg-gradient-to-br from-card via-card/90 to-g3/50 rounded-2xl p-8 backdrop-blur-sm border border-white/10 hover:border-blue-500/30 transition-all duration-300 h-full">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25">
@@ -463,7 +461,7 @@ export default function HomePage() {
               className="relative group h-full"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="relative bg-gradient-to-br from-gray-900/60 via-black/40 to-gray-800/60 rounded-2xl p-8 backdrop-blur-sm border border-gray-800/50 hover:border-green-500/30 transition-all duration-300 h-full">
+              <div className="relative bg-gradient-to-br from-card via-card/90 to-g3/50 rounded-2xl p-8 backdrop-blur-sm border border-white/10 hover:border-green-500/30 transition-all duration-300 h-full">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/25">
@@ -491,7 +489,7 @@ export default function HomePage() {
               className="relative group h-full"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="relative bg-gradient-to-br from-gray-900/60 via-black/40 to-gray-800/60 rounded-2xl p-8 backdrop-blur-sm border border-gray-800/50 hover:border-orange-500/30 transition-all duration-300 h-full">
+              <div className="relative bg-gradient-to-br from-card via-card/90 to-g3/50 rounded-2xl p-8 backdrop-blur-sm border border-white/10 hover:border-orange-500/30 transition-all duration-300 h-full">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/25">
@@ -530,9 +528,9 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
             variants={fadeInUp}
-            className="relative bg-gradient-to-br from-gray-900/40 via-black/20 to-gray-800/40 rounded-lg p-6 overflow-hidden backdrop-blur-sm shadow-lg shadow-violet/5 hover:shadow-violet/15 border border-gray-800/50 hover:border-gray-700/60 transition-all duration-300 group"
+            className="relative bg-gradient-to-br from-card via-card/90 to-g3/40 rounded-lg p-6 overflow-hidden backdrop-blur-sm shadow-lg shadow-violet/5 hover:shadow-violet/15 border border-white/10 hover:border-violet/60 transition-all duration-300 group"
           >
-            <div className="absolute inset-0 bg-violet/8 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-violet/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10">
               <h4 className="font-semibold mb-3">Market Decorrelation</h4>
               <p className="text-sm text-muted leading-relaxed">
@@ -544,9 +542,9 @@ export default function HomePage() {
           
           <motion.div
             variants={fadeInUp}
-            className="relative bg-gradient-to-br from-gray-900/40 via-black/20 to-gray-800/40 rounded-lg p-6 overflow-hidden backdrop-blur-sm shadow-lg shadow-violet/5 hover:shadow-violet/15 border border-gray-800/50 hover:border-gray-700/60 transition-all duration-300 group"
+            className="relative bg-gradient-to-br from-card via-card/90 to-g3/40 rounded-lg p-6 overflow-hidden backdrop-blur-sm shadow-lg shadow-violet/5 hover:shadow-violet/15 border border-white/10 hover:border-violet/60 transition-all duration-300 group"
           >
-            <div className="absolute inset-0 bg-violet/8 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-violet/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10">
               <h4 className="font-semibold mb-3">Multiple Alpha Sources</h4>
               <p className="text-sm text-muted leading-relaxed">
@@ -558,9 +556,9 @@ export default function HomePage() {
           
           <motion.div
             variants={fadeInUp}
-            className="relative bg-gradient-to-br from-gray-900/40 via-black/20 to-gray-800/40 rounded-lg p-6 overflow-hidden backdrop-blur-sm shadow-lg shadow-violet/5 hover:shadow-violet/15 border border-gray-800/50 hover:border-gray-700/60 transition-all duration-300 group"
+            className="relative bg-gradient-to-br from-card via-card/90 to-g3/40 rounded-lg p-6 overflow-hidden backdrop-blur-sm shadow-lg shadow-violet/5 hover:shadow-violet/15 border border-white/10 hover:border-violet/60 transition-all duration-300 group"
           >
-            <div className="absolute inset-0 bg-violet/8 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-violet/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative z-10">
               <h4 className="font-semibold mb-3">Dynamic Flexibility</h4>
               <p className="text-sm text-muted leading-relaxed">
@@ -575,6 +573,7 @@ export default function HomePage() {
         {/* Three Pillars */}
         <Section 
           id="pillars"
+          className="bg-card/30"
           title="Three Pillars"
           subtitle="Structure, flexibility, and vision combined for sustainable performance"
           centered
@@ -699,7 +698,7 @@ export default function HomePage() {
           </div>
           <div className="relative rounded-2xl p-px bg-gradient-to-r from-violet via-purple-400 to-violet">
             {/* Card body */}
-            <div className="relative bg-black backdrop-blur-sm rounded-2xl p-8">
+            <div className="relative bg-card rounded-2xl p-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
               {/* Left side - Text */}
               <div className="flex-1 text-left">

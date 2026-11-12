@@ -41,8 +41,8 @@ export function Hero() {
     <section className="hero-section relative h-screen flex flex-col overflow-hidden">
       {/* Space Background - Static */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-bg via-g4/10 to-bg" />
-        <div className="absolute inset-0 bg-gradient-radial from-violet/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg via-g4/40 to-bg" />
+        <div className="absolute inset-0 bg-gradient-radial from-violet/10 via-transparent to-transparent" />
       </div>
 
       {/* Universe Canvas - Interactive */}
@@ -55,7 +55,7 @@ export function Hero() {
         className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
         style={{
           height: '30vh',
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.85) 75%, #000000 100%)',
+          background: 'linear-gradient(to bottom, transparent 0%, rgb(var(--bg-rgb) / 0.4) 40%, rgb(var(--bg-rgb) / 0.85) 75%, rgb(var(--bg-rgb)) 100%)',
         }}
       />
 
@@ -95,11 +95,12 @@ export function Hero() {
                 variants={fadeInUp}
               >
                 <Image
-                  src="/images/pulsar-logo-full.png"
+                  src="/images/pulsar-logo.png"
                   alt="Pulsar"
-                  width={280}
-                  height={280}
-                  className="w-48 sm:w-56 lg:w-72 h-auto drop-shadow-2xl"
+                  width={984}
+                  height={474}
+                  sizes="(min-width: 1024px) 320px, (min-width: 640px) 272px, 224px"
+                  className="w-56 sm:w-[17rem] lg:w-80 h-auto"
                   priority
                 />
               </motion.div>
