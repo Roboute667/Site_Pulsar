@@ -11,6 +11,7 @@ const navItems = [
   { href: '/team', label: 'Team' },
   { href: '/faq', label: 'FAQ' },
   { href: '/disclosures', label: 'Disclosures' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function Navbar() {

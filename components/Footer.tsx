@@ -15,7 +15,7 @@ const footerLinks: Record<string, FooterLink[]> = {
     { href: '/about', label: 'About' },
     { href: '/team', label: 'Team' },
     { href: '/faq', label: 'FAQ' },
-    { href: 'mailto:contact@pulsarfund.com', label: 'Contact', external: true },
+    { href: '/contact', label: 'Contact' },
   ],
   Legal: [
     { href: '/legal', label: 'Terms & Privacy' },

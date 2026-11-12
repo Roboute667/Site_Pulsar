@@ -53,7 +53,7 @@ export default function FAQPage() {
           </div>
           
           <CTAGroup>
-            <CTA href="mailto:contact@pulsarfund.com" variant="primary" external>
+            <CTA href="/contact" variant="primary">
               Contact Us
             </CTA>
             <CTA href="/disclosures" variant="secondary">

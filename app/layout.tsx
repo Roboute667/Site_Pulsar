@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { RoutingCat } from 'routingcat/next'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://pulsarfund.com',
+    url: 'https://site-pulsar-c7uq.vercel.app',
     siteName: 'Pulsar Fund Management',
     title: 'Pulsar | Alternative Multi-Strategy Fund',
     description: 'FCA-regulated alternative investment fund combining five complementary strategies for all market conditions.',
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     ],
     shortcut: '/images/logo.png',
   },
-  metadataBase: new URL('https://pulsarfund.com'),
+  metadataBase: new URL('https://site-pulsar-c7uq.vercel.app'),
 }
 
 export const viewport = {
@@ -74,6 +75,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <RoutingCat />
       </body>
     </html>
   )
