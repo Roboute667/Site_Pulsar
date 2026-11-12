@@ -27,8 +27,9 @@ export async function sendContactMessage(
   _previous: ContactState | null,
   form: FormData,
 ): Promise<ContactState> {
-  // Honeypot: real visitors never fill this hidden field.
-  if (String(form.get('company') ?? '') !== '') {
+  // Honeypot: real visitors never fill this hidden field. Its name is one browser autofill ignores.
+  if (String(form.get('hp_check') ?? '') !== '') {
+    console.warn('Contact form: honeypot filled, message dropped.')
     return { ok: true, message: 'Thank you. We will get back to you shortly.' }
   }
 
@@ -72,6 +73,8 @@ export async function sendContactMessage(
     console.error('Contact form: sending failed', error)
     return { ok: false, message: 'Your message could not be sent. Please try again later.', values }
   }
+
+  console.log('Contact form: message sent.')
 
   // The conversion, counted once per address without keeping it: a hash of the normalized email.
   const id = createHash('sha256').update(email.toLowerCase()).digest('hex')

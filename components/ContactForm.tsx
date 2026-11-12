@@ -62,8 +62,8 @@ export function ContactForm() {
 
       {/* Honeypot: hidden from visitors, filled only by bots. */}
       <div className="hidden" aria-hidden="true">
-        <label htmlFor="contact-company">Company</label>
-        <input id="contact-company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+        <label htmlFor="contact-hp">Leave this field empty</label>
+        <input id="contact-hp" name="hp_check" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
       <div>
