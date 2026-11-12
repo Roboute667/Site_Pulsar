@@ -5,15 +5,26 @@
 
 
 :root {
-  --bg: #000000;
-  --fg: #e8e6ee;
+  --bg: #0a0814;
+  --fg: #eeecf4;
   --violet: #742aa9;
   --g1: #b477e0;
   --g2: #8a52ba;
   --g3: #362462;
   --g4: #1a143c;
-  --card: #111218;
-  --muted: #a8a2b6;
+  --card: #17132b;
+  --muted: #b9b3c9;
+
+  /* The same colors as channel triplets, for Tailwind's opacity modifiers. */
+  --bg-rgb: 10 8 20;
+  --fg-rgb: 238 236 244;
+  --violet-rgb: 116 42 169;
+  --g1-rgb: 180 119 224;
+  --g2-rgb: 138 82 186;
+  --g3-rgb: 54 36 98;
+  --g4-rgb: 26 20 60;
+  --card-rgb: 23 19 43;
+  --muted-rgb: 185 179 201;
 }
 
 * {
